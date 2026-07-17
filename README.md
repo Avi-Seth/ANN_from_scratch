@@ -1,8 +1,8 @@
 # ANN From Scratch
 
-This is my attempt at understanding what actually goes on under the hood of a neural network by building one completely from scratch in pure Python. No NumPy, no PyTorch, not even the `math` module. Even the sigmoid function is homemade: I approximate e^x with a 30-term Taylor series and evaluate it using synthetic division (yes, the thing from algebra class actually turned out to be useful).
+This is my attempt at understanding and replicating what actually goes on in neural network by building one completely from scratch in pure Python, without any libraries. No NumPy, no PyTorch, no `math` module. Even the sigmoid function is homemade. I approximated e^x with a 30-term Taylor series and evaluated it using synthetic division.
 
-The point of this project is learning, not writing production code. And honestly? Mission accomplished. Forward passes, backpropagation, gradient descent... I now get how all of it works because I had to derive and code every step myself.
+The point of this project is learning, not writing production code.
 
 ## How it works
 
@@ -15,9 +15,7 @@ net.test([0, 0, 1, 1, 1])       # forward pass, returns activations + label
 - Layers are defined by a simple list of sizes
 - Weights and biases are plain nested Python lists
 - Training uses backpropagation with mean squared error
-- Run the demo with `python3 nn.py` (needs nothing but Python 3)
-
-The backprop math is actually correct. The gradients match numerical differentiation, which was honestly the most satisfying part of the whole project.
+- Run the demo with `python3 nn.py`
 
 ## Known limitations (and yes, some bugs)
 
